@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta Sport</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <style>
+        .container2 {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+    </style>
 
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-    crossorigin="anonymous"
-  />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
 
-</head>
-<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
+  <body>
     <header class="p-3 bg-dark text-white">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
   
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="index.html" class="h5 nav-link px-3 text-warning">Home</a></li>
+              <li><a href="index.html" class="nav-link px-3 text-white">Home</a></li>
               <li><a href="course.html" class="nav-link px-3 text-white">Course</a></li>
               <li><a href="select_course.html" class="nav-link px-3 text-white">Select course</a></li>
-              <li><a href="contact.html" class="nav-link px-3 text-white">Contact</a></li>
+              <li><a href="contact.html" class="h5 nav-link px-3 text-warning">Contact</a></li>
             </ul>
   
             <div class="text-end">
@@ -34,34 +46,75 @@
         </div>
     </header>
 
+    <div class="container2 pt-5">
+        <div class="col-md">
+            <h4 class="mb-3">Contact</h4>
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+    
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+    
+                <div class="col-12">
+                  <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                  </div>
+                </div>
 
-    <div class="container col-xxl-8 px-4">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
-            <img
-              src="images/therock1.png"
-              class="d-block mx-lg-auto img-fluid"
-              alt="Bootstrap Themes"
-              width="700"
-              height="500"
-              loading="lazy"
-            />
-          </div>
-          <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">It's not just School of sport <br />It's Meta Sport</h1>
-            <p class="lead">
-              มาส่องคลาสออกกำลังกายในสระว่ายน้ำที่ คลับไอคอน อย่างคลาส AQUAFIT คลาสที่จะท้าทาย
-              ร่างกายของคุณด้วยการฝึกร่วมกับอุปกรณ์ที่หลากหลายอย่าง ดัมเบล บาร์เบล และฟิน เสริมสร้าง
-              ความแข็งแรงของระบบหัวใจและหลอดเลือด
-              โรคหลอดเลือดหัวใจถือเป็นภัยเงียบที่น่ากลัวมากในยุคนี้
-            </p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <a href="select_course.html"><button type="button" class="btn btn-warning btn-lg px-4 me-md-2">Select course</button></a>
-            </div>
-          </div>
-        </div>
-      </div>
+                <div class="col-12">
+                    <label for="address" class="form-label">Call</label>
+                    <input type="tel" class="form-control" id="call" placeholder="099-999-9999" required>
+                    <div class="invalid-feedback">
+                      Please enter your Call.
+                    </div>
+                  </div>
 
+                <div class="col-6">
+                    <label for="sex" class="form-label">Sex : </label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">Other</label>
+                      </div>
+                </div>
+
+                <div>
+                  <label for="firstName" class="form-label">Adress</label>
+                  <div class="form-outline">
+                    <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+                  </div>
+
+    
+              <hr class="my-4">
+    
+              <button class="w-100 btn btn-warning btn-lg" type="submit">Submit</button>
+            </form>
+          </div>
+    </div>
+    </div>
+    
+    </div>
       <!-- Footer -->
       <div class="container pt-5">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -94,5 +147,21 @@
           <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
         </symbol>
       </svg>
+    
+
+    
+    
+    
+
+  <script type="text/javascript">(
+    function(){
+      window['__CF$cv$params']={
+        r:'6d5482a48f6e4b76',
+        m:'aU3ttPuuju1Md3UFfkQzrJtf9v1etS.xT3.YteJjJog-1643480802-0-ASj2Upy3HWkWy+ceYl2ZRHH3lZ4pyYgiC1ZrWoXRPzIMEzgK0uwCfmZ9yFcZqqAywnutKE2Ao97SYJrTSCiu0wcQIObDRkf4j/FoM2Xyx+yIRFoI9M+58O2Lv+eUdo/mN6fgeiOU7gOdx+OWEIoODrCCAxEe2X+WIMcR5uHXNImIF0GEMXf7yJ4aV3JaVQakiQ==',
+        s:[0x8f46900bcc,0x515a29faba],
+      }
+    }
+    )();
+  </script>
 </body>
 </html>

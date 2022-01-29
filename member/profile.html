@@ -1,67 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta Sport</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
 
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-    crossorigin="anonymous"
-  />
 
-</head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="login.css" />
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
 <body>
-    <header class="p-3 bg-dark text-white">
-        <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-  
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="index.html" class="h5 nav-link px-3 text-warning">Home</a></li>
-              <li><a href="course.html" class="nav-link px-3 text-white">Course</a></li>
-              <li><a href="select_course.html" class="nav-link px-3 text-white">Select course</a></li>
-              <li><a href="contact.html" class="nav-link px-3 text-white">Contact</a></li>
-            </ul>
-  
-            <div class="text-end">
-              <a href="login.html"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
-              <a href="register.html"><button type="button" class="btn btn-warning">Sign-up</button></a>
-            </div>
-          </div>
-        </div>
-    </header>
+  <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="index.html" class="nav-link px-3 text-white">Home</a></li>
+          <li><a href="course.html" class="nav-link px-3 text-white">Course</a></li>
+          <li><a href="select_course.html" class="nav-link px-3 text-white">Select course</a></li>
+          <li><a href="contact.html" class="nav-link px-3 text-white">Contact</a></li>
+          <li><a href="profile.html" class="h5 nav-link px-3 text-warning">Profile</a></li>
+        </ul>
 
-    <div class="container col-xxl-8 px-4">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
-            <img
-              src="images/therock1.png"
-              class="d-block mx-lg-auto img-fluid"
-              alt="Bootstrap Themes"
-              width="700"
-              height="500"
-              loading="lazy"
-            />
-          </div>
-          <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">It's not just School of sport <br />It's Meta Sport</h1>
-            <p class="lead">
-              มาส่องคลาสออกกำลังกายในสระว่ายน้ำที่ คลับไอคอน อย่างคลาส AQUAFIT คลาสที่จะท้าทาย
-              ร่างกายของคุณด้วยการฝึกร่วมกับอุปกรณ์ที่หลากหลายอย่าง ดัมเบล บาร์เบล และฟิน เสริมสร้าง
-              ความแข็งแรงของระบบหัวใจและหลอดเลือด
-              โรคหลอดเลือดหัวใจถือเป็นภัยเงียบที่น่ากลัวมากในยุคนี้
-            </p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <a href="select_course.html"><button type="button" class="btn btn-warning btn-lg px-4 me-md-2">Select course</button></a>
-            </div>
-          </div>
+        <div class="text-end">
+          <a href="../login.html"><button type="button" class="btn btn-outline-light me-2">Logout</button></a>
+          <a href="profile.html"><button type="button" class="btn btn-warning">Tanakon Ruchikanchanarat</button></a>
+
         </div>
       </div>
+    </div>
+  </header>
 
+
+  <h2 class="align-middle text-center pt-3">
+    My Profile
+  </h2>
+  <div class="p-2">
+    <img src="../images/profile1.jpg" class="rounded mx-auto d-block " height="400px" />
+  </div>
+
+  <div class="container justify-content-center text-center p-4">
+    <h2>Name : Thanakon Ruchikanchanarat</h2>
+    <h3>Your Course : Swimming</h3>
+    <a>Remaining number of hours for this course : 10 Hrs.</a>
+  </div>
       <!-- Footer -->
       <div class="container pt-5">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -94,5 +81,7 @@
           <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
         </symbol>
       </svg>
-</body>
+
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d5464504bae4b95',m:'waeHQqfp_bDuVQrWIWZRIaMJntpn8Z_KG68pCRUI_6o-1643479559-0-AX8Pc+qRjRXrp6MdEw3F9p5hsgP4huyiGY8JcpBOCW/+xnJAfcpLYq6mQQZXX7+Dvpekm0yLeHBJQSYVzy8pVDbJSgY0waxQh1DjHprywVv43QZ1tg99AeYoYaT4p9JAWSfo7eVWTq2abrCjwKOSbTmXat189RQorMdQpCMf9VDq7j4zZZ0hUjnDG+d2rwLNsw==',s:[0x465e8865d0,0x2572b8fa49],}})();</script></body>
+
 </html>
