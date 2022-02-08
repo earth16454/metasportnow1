@@ -39,8 +39,8 @@
             </ul>
   
             <div class="text-end">
-              <a href="login.html"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
-              <a href="register.html"><button type="button" class="btn btn-warning">Sign-up</button></a>
+              <a href="login.php"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+              <a href="register.php"><button type="button" class="btn btn-warning">Sign-up</button></a>
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@
                 </div>
     
                 <div class="col-12">
-                  <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                  <label for="email" class="form-label">Email</label>
                   <input type="email" class="form-control" id="email" placeholder="you@example.com">
                   <div class="invalid-feedback">
                     Please enter a valid email address for shipping updates.
@@ -77,33 +77,17 @@
 
                 <div class="col-12">
                     <label for="address" class="form-label">Call</label>
-                    <input type="tel" class="form-control" id="call" placeholder="099-999-9999" required>
+                    <input type="tel" class="form-control" id="call" placeholder="0999999999" maxlength="10" required>
                     <div class="invalid-feedback">
                       Please enter your Call.
                     </div>
                   </div>
 
-                <div class="col-6">
-                    <label for="sex" class="form-label">Sex : </label><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Male</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Female</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                        <label class="form-check-label" for="inlineRadio3">Other</label>
-                      </div>
-                </div>
-
-                <div>
-                  <label for="firstName" class="form-label">Adress</label>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
                   <div class="form-outline">
-                    <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
-                  </div>
+                    <textarea class="form-control" type="text" id="message" name="message" rows="4"></textarea>
+                </div>
 
     
               <hr class="my-4">
