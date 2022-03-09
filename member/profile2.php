@@ -4,7 +4,7 @@ session_start();
 require_once '../config/db.php';
 if (!isset($_SESSION['user_login'])) {
     $_SESSION['error'] = 'กรุณาเข้าสู่ระบบ!';
-    header('location: login.php');
+    header('location: ../login.php');
 }
 
 ?>
@@ -13,13 +13,12 @@ if (!isset($_SESSION['user_login'])) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta Sport</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-
 </head>
 
 <body>
@@ -37,40 +36,99 @@ if (!isset($_SESSION['user_login'])) {
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="index.php" class="h5 nav-link px-3 text-warning">Home</a></li>
+                    <li><a href="index.php" class="nav-link px-3 text-white">Home</a></li>
                     <li><a href="course.php" class="nav-link px-3 text-white">Course</a></li>
                     <li><a href="select_course.php" class="nav-link px-3 text-white">Select course</a></li>
                     <li><a href="contact.php" class="nav-link px-3 text-white">Contact</a></li>
-                    <li><a href="profile.php" class="nav-link px-3 text-white">Profile</a></li>
+                    <li><a href="profile.php" class="h5 nav-link px-3 text-warning">Profile</a></li>
                 </ul>
 
                 <div class="text-end">
-                    <a href="profile.php" class="btn btn-outline-warning me-2"><?php echo $row['firstname'] . ' ' . $row['lastname'] ?></a>
+                    <a href="profile.php" class="btn btn-outline-warning me-2"><?php echo $row['firstname'] . ' ' . $row['lastname']?></a>
                     <a href="../config/logout.php"><button type="button" class="btn btn-outline-light">Logout</button></a>
                 </div>
             </div>
         </div>
     </header>
 
-
-    <div class="container col-xxl-8 px-4">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="../images/therock1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">It's not just School of sport <br />It's Meta Sport</h1>
-                <p class="lead">
-                    มาส่องคลาสออกกำลังกายในสระว่ายน้ำที่ คลับไอคอน อย่างคลาส AQUAFIT คลาสที่จะท้าทาย
-                    ร่างกายของคุณด้วยการฝึกร่วมกับอุปกรณ์ที่หลากหลายอย่าง ดัมเบล บาร์เบล และฟิน เสริมสร้าง
-                    ความแข็งแรงของระบบหัวใจและหลอดเลือด
-                    โรคหลอดเลือดหัวใจถือเป็นภัยเงียบที่น่ากลัวมากในยุคนี้
-                </p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <a href="select_course.php"><button type="button" class="btn btn-warning btn-lg px-4 me-md-2">Select course</button></a>
+    <!-- <div class="container rounded bg-white mb-5">
+        <div class="row">
+            <div class="col-md-3 bg-light">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img class="rounded-circle mt-5" width="150px" height="150px" src="../images/profile3.jpg" /><span class="font-weight-bold"><?php echo $row['firstname'] . ' ' . $row['lastname']?></span><span class="text-black-50"><?php echo $row['email'] ?></span><span> </span>
                 </div>
             </div>
+            <div class="col-md-5 border-end">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Information</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <label class="labels">Name:</label>
+                            <p><?php echo $row['firstname'] . ' ' . $row['lastname']?></p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <label class="labels">Course:</label>
+                            <p>Swimming</p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <label class="labels">Email:</label>
+                            <p><?php echo $row['email'] ?></p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <label class="labels">Birthday:</label>
+                            <p><?php echo $row['birthday'] ?></p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <label class="labels">Tel:</label>
+                            <p><?php echo $row['tel'] ?></p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <label class="labels">Sex:</label>
+                            <p><?php echo $row['sex'] ?></p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <label class="labels">Create at:</label>
+                            <p><?php echo $row['create_at'] ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center experience">
+                    </div>
+                    <br />
+                    <div class="col-md-12">
+                        <label class="labels">Contact to report problems:</label>
+                        <textarea class="form-control mt-1" id="exampleFormControlTextarea1" placeholder="contact" rows="4"></textarea>
+                    </div>
+                    <br />
+                    <div class="col-md-12">
+                        <a href="" class="btn btn-warning w-100 mt-3">Contact</a>
+                    </div>
+                </div>
+                
+            </div>
         </div>
+    </div> -->
+
+    <div class="container my-5 align-item-center">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sequi adipisci, vitae vero error doloremque iusto et expedita minima quam.</p>
     </div>
 
     <!-- Footer -->
@@ -86,19 +144,25 @@ if (!isset($_SESSION['user_login'])) {
             </div>
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                <li class="ms-3">
+                    <a class="text-muted" href="#"><svg class="bi" width="24" height="24">
                             <use xlink:href="#twitter"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                        </svg></a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-muted" href="#"><svg class="bi" width="24" height="24">
                             <use xlink:href="#instagram"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                        </svg></a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-muted" href="#"><svg class="bi" width="24" height="24">
                             <use xlink:href="#facebook"></use>
-                        </svg></a></li>
+                        </svg></a>
+                </li>
             </ul>
         </footer>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
         <symbol id="bootstrap" viewBox="0 0 118 94">
             <title>Bootstrap</title>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
@@ -113,6 +177,8 @@ if (!isset($_SESSION['user_login'])) {
             <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
         </symbol>
     </svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 
 </html>

@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
     } else if (strlen($_POST['tel']) < 10) {
         $_SESSION['error'] = 'กรุณาระบุเบอร์โทรศัพท์ที่ถูกต้อง';
         header("location: ../register.php");
-    } else if (empty($tel)) {
+    } else if (empty($sex)) {
         $_SESSION['error'] = 'กรุณาเลือกเพศ';
         header("location: ../register.php");
     } else {
@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
             $row = $check_email->fetch(PDO::FETCH_ASSOC);
 
             if ($row['email'] == $email) {
-                $_SESSION['warning'] = "มีอีเมลนี้อยู่ในระบบแล้ว <a href='../login.php'>คลิ๊กที่นี่เพื่อนเข้าสู่ระบบ</a>";
+                $_SESSION['warning'] = "มีอีเมลนี้อยู่ในระบบแล้ว <a href='login.php'>คลิ๊กที่นี่เพื่อนเข้าสู่ระบบ</a>";
                 header("location: ../register.php");
             } else if (!isset($_SESSION['error'])) {
                 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
                 $stmt->bindParam(":sex", $sex);
                 $stmt->bindParam(":urole", $urole);
                 $stmt->execute();
-                $_SESSION['success'] = "สมัครสมาชิกเรียบร้อยแล้ว! <a href='../login.php' class='alert-link'>คลิ๊กที่นี่</a> เพื่อเข้าสู่ระบบ";
+                $_SESSION['success'] = "สมัครสมาชิกเรียบร้อยแล้ว! <a href='login.php' class='alert-link'>คลิ๊กที่นี่</a> เพื่อเข้าสู่ระบบ";
                 header("location: ../register.php");
             } else {
                 $_SESSION['error'] = "มีบางอย่างผิดพลาด";

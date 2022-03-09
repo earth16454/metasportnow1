@@ -83,7 +83,7 @@ if (!isset($_SESSION['user_login'])) {
         <div class="text-bg text-center">
             <h5 class="text-white">MetaSport</h5>
             <p class="text-white">เราเป็นมากกว่า ฟิตเนส<br>ที่มีมากกว่า 4,500 กรุ๊ปคลาสต่อเดือน<br>ที่จะทำให้การออกกำลังกายนั้นสนุกมากขึ้น</p>
-            <a href="" class="btn btn-warning px-3">เลือกคอร์สเลย</a>
+            <a href="select_course.php" class="btn btn-warning px-3">เลือกคอร์สเลย</a>
         </div>
         <!-- <img src="../images/bg_course.jpg" width="100%"> -->
     </div>

@@ -67,7 +67,7 @@ require_once 'config/db.php';
                     </div>
                 <?php } ?>
                 <?php if (isset($_SESSION['warning'])) { ?>
-                    <div class="alert alert-danger" role="alert">
+                    <div class="alert alert-waring" role="alert">
                         <?php
                         echo $_SESSION['warning'];
                         unset($_SESSION['warning']);

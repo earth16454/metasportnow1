@@ -4,7 +4,7 @@ session_start();
 require_once '../config/db.php';
 if (!isset($_SESSION['user_login'])) {
     $_SESSION['error'] = 'กรุณาเข้าสู่ระบบ!';
-    header('location: login.php');
+    header('location: ../login.php');
 }
 
 ?>
@@ -48,7 +48,7 @@ if (!isset($_SESSION['user_login'])) {
                 </ul>
 
                 <div class="text-end">
-                    <a href="profile.php" class="btn btn-outline-warning me-2"><?php echo $row['firstname'] . ' ' . $row['lastname'] ?></a>
+                    <a href="profile.php" class="btn btn-outline-warning me-2"><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></a>
                     <a href="../config/logout.php"><button type="button" class="btn btn-outline-light">Logout</button></a>
                 </div>
             </div>
@@ -56,22 +56,22 @@ if (!isset($_SESSION['user_login'])) {
     </header>
 
     <div class="container text-center">
-        <h2 class="align-middle text-center pt-4 pb-2">Welcome, <?php echo $row['firstname'] . ' ' . $row['lastname'] ?></h2>
+        <h2 class="align-middle text-center pt-4 pb-2">Welcome, <?php echo $row['firstname'] . ' ' . $row['lastname']; ?></h2>
         <img src="../images/profile1.jpg" class="rounded mx-auto d-block " height="400px" />
         <div class="pt-5">
-            <h2>Name : <?php echo $row['firstname'] . ' ' . $row['lastname'] ?></h2>
+            <h2>Name : <?php echo $row['firstname'] . ' ' . $row['lastname']; ?></h2>
             <h3>Your Course : Swimming</h3>
             <a>Remaining number of hours for this course : 10 Hrs.</a>
         </div>
         <div class="text-start mx-5">
-            <p>Name: <t><?php echo $row['firstname'] . ' ' . $row['lastname']?></p>
-            <p>Email: <?php echo $row['email'] ?></p>
-            <p>Password: <?php echo $row['password'] ?></p>
-            <p>Birthday: <?php echo $row['birthday'] ?></p>
-            <p>Tel: <?php echo $row['tel'] ?></p>
-            <p>Sex: <?php echo $row['sex'] ?></p>
-            <p>Urole: <?php echo $row['urole'] ?></p>
-            <p>Create at: <?php echo $row['create_at'] ?></p>
+            <p>Name: <t><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></p>
+            <p>Email: <?php echo $row['email']; ?></p>
+            <p>Password: <?php echo $row['password']; ?></p>
+            <p>Birthday: <?php echo $row['birthday']; ?></p>
+            <p>Tel: <?php echo $row['tel']; ?></p>
+            <p>Sex: <?php echo $row['sex']; ?></p>
+            <p>Urole: <?php echo $row['urole']; ?></p>
+            <p>Create at: <?php echo $row['create_at']; ?></p>
         </div>
     </div>
 

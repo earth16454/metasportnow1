@@ -29,23 +29,23 @@
                         if(password_verify($password, $row['password'])){ // ถ้ารหัสผ่านถูก
                             if ($row['urole'] == 'admin'){
                                 $_SESSION['admin_login'] = $row['id'];
-                                header("location: admin.php");
+                                header("location: ../admin/index.php"); // รอแก้ตรงนี้
                             } else {
                                 $_SESSION['user_login'] = $row['id'];
                                 header("location: ../member/profile.php");
                             }
                         } else {
                             $_SESSION['error'] = 'รหัสผ่านไม่ถูกต้อง';
-                            header("location: login.php");
+                            header("location: ../login.php");
                         }
                     } else {
                         $_SESSION['error'] = 'อีเมลไม่ถูกต้อง';
-                        header("location: login.php");
+                        header("location: ../login.php");
                     }
 
                 } else {
-                    $_SESSION['error'] = "ไม่มีข้อมูลในระบบ";
-                    header("location: login.php");
+                    $_SESSION['error'] = "ไม่มีข้อมูลในระบบ, กรุณาสมัครสมาชิก";
+                    header("location: ../login.php");
                 }
 
             } catch(PDOException $e){
